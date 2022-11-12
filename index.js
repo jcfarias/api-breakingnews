@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
 
-app.get('/', function( req, res ){
-    res.send('Hello World');
-})
+app.get('/soma', function( req, res ){
+    
+    let soma = 100 + 1;
 
-app.get('/home', function( req, res ){
-    res.send('Home');
+    res.json({ soma: soma });
+
 })
 
 app.listen(3000);
